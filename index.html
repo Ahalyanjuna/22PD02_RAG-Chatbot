@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document RAG Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Document RAG Chatbot</h1>
+        
+        <div id="status" class="status-bar">Loading knowledge base status...</div>
+        
+        <div class="main-content">
+            <div class="chat-container">
+                <h2>Chat</h2>
+                <div id="chatbox"></div>
+                
+                <div id="inputArea">
+                    <input type="text" id="userInput" placeholder="Ask a question...">
+                    <button id="sendBtn">Send</button>
+                </div>
+            </div>
+            
+            <div class="upload-container">
+                <h2>Upload Documents</h2>
+                <div id="fileUpload">
+                    <input type="file" id="documentFile" accept=".pdf,.docx,.csv">
+                    <button id="uploadBtn">Upload</button>
+                    <div id="uploadStatus"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
